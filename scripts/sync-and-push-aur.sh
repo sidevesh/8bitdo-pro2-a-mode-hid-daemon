@@ -24,7 +24,7 @@ fi
 # Ensure AUR git repo exists
 mkdir -p "$AUR_DIR"
 if [[ ! -d "$AUR_DIR/.git" ]]; then
-  git -C "$AUR_DIR" init
+  git -C "$AUR_DIR" init -b master
 fi
 
 # Set AUR remote if not already set
@@ -57,6 +57,5 @@ cp "$TEMPLATE_DIR/PKGBUILD" "$AUR_DIR/PKGBUILD"
   git commit -m "$commit_msg"
   
   # Push to AUR
-  current_branch="$(git branch --show-current 2>/dev/null || echo master)"
-  git push -u origin "$current_branch"
+  git push -u origin master
 )
