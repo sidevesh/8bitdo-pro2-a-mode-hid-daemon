@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+# SPDX-License-Identifier: MIT
+#
+# 8BitDo Pro 2 A-mode Bluetooth HID to uinput daemon
+#
+# Copyright (c) 2026 Swapnil Devesh <me@sidevesh.com>
+
 import sys, os, socket, struct, fcntl, time, signal, logging, select
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
