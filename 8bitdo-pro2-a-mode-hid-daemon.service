@@ -1,0 +1,13 @@
+[Unit]
+Description=8BitDo Pro 2 A-mode HID daemon
+After=bluetooth.target
+Wants=bluetooth.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/8bitdo-pro2-a-mode-hid-daemon
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
